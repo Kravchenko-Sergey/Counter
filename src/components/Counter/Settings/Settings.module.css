@@ -1,0 +1,53 @@
+.item {
+    padding: 10px 5px 10px 0;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    color: #57d0ef;
+    font-weight: 700;
+    flex: 1 1 70%;
+
+}
+
+.countBlock {
+    width: 20px;
+    padding: 0 2px 0 12px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #57d0ef;
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 30%;
+}
+
+.countBlockError {
+    width: 20px;
+    box-sizing: border-box;
+    background-color: lightcoral;
+    border: 1px solid red;
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 30%;
+}
+
+.count {
+    padding: 0 0 0 18px;
+    font-size: 14px;
+}
+
+.buttonsBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    height: 7px;
+    width: 7px;
+}
