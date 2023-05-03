@@ -1,9 +1,9 @@
 import React, { ChangeEvent } from 'react'
-import classes from './Settings.module.css'
+import classes from './Settings.module.scss'
 import { onChangeMaxCountAC, onChangeStartCountAC } from '../../../state/reducers/initialState-reducer'
 import { useDispatch } from 'react-redux'
 
-const Settings = ({ maxCount, startCount }: SettingsPropsType) => {
+export const Settings = ({ maxCount, startCount }: SettingsPropsType) => {
 	const dispatch = useDispatch()
 	const onChangeMaxCount = (e: ChangeEvent<HTMLInputElement>) => {
 		dispatch(onChangeMaxCountAC(Number(e.currentTarget.value)))
@@ -40,8 +40,6 @@ const Settings = ({ maxCount, startCount }: SettingsPropsType) => {
 		</>
 	)
 }
-
-export default Settings
 
 type SettingsPropsType = {
 	maxCount: number

@@ -1,18 +1,17 @@
 .item {
-    padding: 10px 5px 10px 0;
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-}
+  padding: 10px 5px 10px 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
 
-.title {
+  .title {
     color: #57d0ef;
     font-weight: 700;
     flex: 1 1 70%;
 
-}
+  }
 
-.countBlock {
+  .countBlock {
     width: 20px;
     padding: 0 2px 0 12px;
     box-sizing: border-box;
@@ -23,9 +22,9 @@
     justify-content: space-between;
     align-items: center;
     flex: 1 1 30%;
-}
+  }
 
-.countBlockError {
+  .countBlockError {
     width: 20px;
     box-sizing: border-box;
     background-color: lightcoral;
@@ -35,19 +34,15 @@
     justify-content: space-between;
     align-items: center;
     flex: 1 1 30%;
-}
-
-.count {
-    padding: 0 0 0 18px;
-    font-size: 14px;
+  }
 }
 
 .buttonsBlock {
-    display: flex;
-    flex-direction: column;
-}
+  display: flex;
+  flex-direction: column;
 
-.button {
+  .button {
     height: 7px;
     width: 7px;
+  }
 }

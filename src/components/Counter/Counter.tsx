@@ -1,10 +1,11 @@
 import React from 'react'
-import classes from './Counter.module.css'
-import Settings from './Settings/Settings'
-import Count from './Count/Count'
-import SuperButton from '../SuperButton/SuperButton'
+import classes from './Counter.module.scss'
+import { Settings } from './Settings/Settings'
+import { Count } from './Count/Count'
+import { SuperButton } from '../SuperButton/SuperButton'
 import {
 	handleIncrementAC,
+	InitialStateType,
 	resetCountAC,
 	switchBetweenMenuAndCounterAC
 } from '../../state/reducers/initialState-reducer'
@@ -12,7 +13,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { AppRootStateType } from '../../state/store'
 import { toggleDisplayAC } from '../../state/reducers/display-reducer'
 
-const Counter = () => {
+export const Counter = () => {
 	const initialState = useSelector((state: AppRootStateType): InitialStateType => state.initialState)
 	const display = useSelector((state: AppRootStateType): boolean => state.display)
 	const dispatch = useDispatch()
@@ -65,12 +66,4 @@ const Counter = () => {
 			)}
 		</div>
 	)
-}
-
-export default Counter
-
-export type InitialStateType = {
-	count: number
-	maxCount: number
-	startCount: number
 }

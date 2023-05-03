@@ -1,13 +1,6 @@
 import React from 'react'
 
-type SuperButtonPropsType = {
-	title: string
-	callback: () => void
-	className: string
-	btnDisabledStatus?: boolean
-}
-
-const SuperButton = ({ title, callback, className, btnDisabledStatus }: SuperButtonPropsType) => {
+export const SuperButton = ({ title, callback, className, btnDisabledStatus }: SuperButtonPropsType) => {
 	const onClickHandler = () => callback()
 
 	return (
@@ -17,4 +10,9 @@ const SuperButton = ({ title, callback, className, btnDisabledStatus }: SuperBut
 	)
 }
 
-export default SuperButton
+type SuperButtonPropsType = {
+	title: string
+	callback: () => void
+	className: string
+	btnDisabledStatus?: boolean
+}
