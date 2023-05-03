@@ -1,15 +1,10 @@
-import React, { ChangeEvent, Dispatch } from 'react'
+import React, { ChangeEvent } from 'react'
 import classes from './Settings.module.css'
-import { ActionsType, onChangeMaxCountAC, onChangeStartCountAC } from '../../../state/reducers/initialState-reducer'
+import { onChangeMaxCountAC, onChangeStartCountAC } from '../../../state/reducers/initialState-reducer'
+import { useDispatch } from 'react-redux'
 
-type SettingsPropsType = {
-	maxCount: number
-	startCount: number
-	btnDisabledStatus: boolean
-	dispatch: Dispatch<ActionsType>
-}
-
-const Settings = ({ maxCount, startCount, dispatch }: SettingsPropsType) => {
+const Settings = ({ maxCount, startCount }: SettingsPropsType) => {
+	const dispatch = useDispatch()
 	const onChangeMaxCount = (e: ChangeEvent<HTMLInputElement>) => {
 		dispatch(onChangeMaxCountAC(Number(e.currentTarget.value)))
 	}
@@ -47,3 +42,9 @@ const Settings = ({ maxCount, startCount, dispatch }: SettingsPropsType) => {
 }
 
 export default Settings
+
+type SettingsPropsType = {
+	maxCount: number
+	startCount: number
+	btnDisabledStatus: boolean
+}

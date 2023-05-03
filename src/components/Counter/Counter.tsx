@@ -10,7 +10,6 @@ import {
 } from '../../state/reducers/initialState-reducer'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppRootStateType } from '../../state/store'
-import { InitialStateType } from '../../App'
 import { toggleDisplayAC } from '../../state/reducers/display-reducer'
 
 const Counter = () => {
@@ -23,7 +22,6 @@ const Counter = () => {
 		dispatch(toggleDisplayAC())
 		dispatch(switchBetweenMenuAndCounterAC())
 	}
-
 	const handleIncrement = () => {
 		initialState.count < initialState.maxCount && dispatch(handleIncrementAC())
 	}
@@ -53,7 +51,6 @@ const Counter = () => {
 							maxCount={initialState.maxCount}
 							startCount={initialState.startCount}
 							btnDisabledStatus={btnDisabledStatus}
-							dispatch={dispatch}
 						/>
 					</div>
 					<div className={classes.buttonsBlock}>
@@ -71,3 +68,9 @@ const Counter = () => {
 }
 
 export default Counter
+
+export type InitialStateType = {
+	count: number
+	maxCount: number
+	startCount: number
+}
